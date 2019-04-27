@@ -1,0 +1,5 @@
+# output files for c/c++ programs not added
+**/a.out
+
+# .vscode folder
+**/.vscode/**
