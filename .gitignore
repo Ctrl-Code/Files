@@ -3,3 +3,6 @@
 
 # .vscode folder
 **/.vscode/**
+
+# input sample
+**/input.txt
