@@ -1,0 +1,35 @@
+<!-- ctrl-code 2019-apr-30 0725 pm ist -->
+
+<!-- html code with js demonstrating removal of JS HTML DOM
+nodes -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>removing-child-nodes</title>
+    </head>
+    <body>
+        <div id="form">
+            Task Name: <input type="text" name="task-name">
+            Notes: <input type="text" name="notes">
+            <button type="button" onclick="myfunc()">click</button>
+        </div>
+    </body>
+    <script>
+        function myfunc(){
+            let formData = document.getElementsByTagName("input");
+            let val1 = formData[0].value;
+            let val2 = formData[1].value;
+            formData = document.getElementById("form");
+            console.log(formData.childElementCount);
+            // formData.removeChild(formData.children[0]);
+            console.log(formData.childElementCount);
+            // formData.removeChild(formData.children[0]);
+            // var x = document.getElementsByTagName("div");
+            // var par = document.getElementsByTagName("body");
+            // par[0].removeChild(par[0].children[0]);
+            document.getElementById("form").innerHTML = "";
+        }
+    </script>
+</html>

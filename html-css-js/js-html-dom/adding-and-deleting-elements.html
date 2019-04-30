@@ -14,15 +14,19 @@ elements -->
         <div id="parent"></div>
     </body>
     <script>
+        let count = 0;
         function myFunction(){
-            let parent = document.getElementById("parent");
-            let child1 = document.createElement("h4");
-            let child2 = document.createElement("p");
-            let child3 = document.createElement("a");
-            parent.appendChild(child1).innerHTML = "Heading for the object created";
-            parent.appendChild(child2).innerHTML = "paragraph for this";
-            parent.appendChild(child3).setAttribute("href","https://www.google.com");
-            child3.innerHTML = "google";
+            if(count < 3){
+                ++count;
+                let parent = document.getElementById("parent");
+                let child1 = document.createElement("h4");
+                let child2 = document.createElement("p");
+                let child3 = document.createElement("a");
+                parent.appendChild(child1).innerHTML = "Heading for the object created";
+                parent.appendChild(child2).innerHTML = "paragraph for this";
+                parent.appendChild(child3).setAttribute("href","https://www.google.com");
+                child3.innerHTML = "google";
+            }
         }
     </script>
 </html>
