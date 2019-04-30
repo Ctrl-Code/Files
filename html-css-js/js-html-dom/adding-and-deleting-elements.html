@@ -1,0 +1,28 @@
+<!-- ctrl-code 2019-apr-30 0523 pm ist -->
+
+<!-- simple html code with js demonstrates adding JS HTML DOM
+elements -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>adding-and-deleting-elements</title>
+    </head>
+    <body>
+        <button type="button" id="button" onclick="myFunction()">Click to add elements</button>
+        <div id="parent"></div>
+    </body>
+    <script>
+        function myFunction(){
+            let parent = document.getElementById("parent");
+            let child1 = document.createElement("h4");
+            let child2 = document.createElement("p");
+            let child3 = document.createElement("a");
+            parent.appendChild(child1).innerHTML = "Heading for the object created";
+            parent.appendChild(child2).innerHTML = "paragraph for this";
+            parent.appendChild(child3).setAttribute("href","https://www.google.com");
+            child3.innerHTML = "google";
+        }
+    </script>
+</html>
