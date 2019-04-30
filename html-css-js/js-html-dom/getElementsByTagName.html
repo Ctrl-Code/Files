@@ -1,0 +1,43 @@
+<!-- ctrl-code 2019-apr-30 0147 pm ist -->
+
+<!-- simple html code with js demonstrating access of JS HTML DOM using
+getElementsByTagName and also usage of onclick mouse event -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>getElementsByTagName</title>
+    </head>
+    <body>
+        <button type="button" onclick="toggle()" id="button">Click to show</button>
+        <p></p>
+        <p></p>
+        <p></p>
+    </body>
+    <script>
+        let x = 0;
+        let tags = document.getElementsByTagName("p");
+        let buttonMsg = document.getElementById("button");
+
+        // incase to see what does tag contain
+        console.log(tags);
+
+        function toggle(){
+            if(!x){
+                tags[0].innerHTML = "Made by Ctrl-code";
+                tags[1].innerHTML = "Demonstrating";
+                tags[2].innerHTML = "getElementsByTagName";
+                buttonMsg.innerHTML = "Click to hide";
+                x = 1;
+            }
+            else{
+                for(let x=0; x!=3; ++x){
+                    tags[x].innerHTML = "";
+                }
+                buttonMsg.innerHTML = "Click to show";
+                x = 0;
+            }
+        }
+    </script>
+</html>
