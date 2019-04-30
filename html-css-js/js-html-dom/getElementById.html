@@ -1,0 +1,34 @@
+<!-- ctrl-code 2019-apr-30 0121 pm ist -->
+
+<!-- simple html code with js demonstrating access of JS HTML DOM using
+getElementById and also usage of onclick and ondblclick mouse events -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>getElementById</title>
+    </head>
+    <body>
+        <button type="button" onclick="toggle()" ondblclick="displayDate()">Click</button>
+        <p id="id1"></p>
+    </body>
+    <script>
+        var x=false;
+        let id = document.getElementById("id1");
+        function toggle(){
+            if(x===false){
+                x = true;
+                id.innerHTML = "Hello World";
+            }
+            else{
+                x = false;
+                id.innerHTML = "";
+            }
+        }
+        function displayDate(){
+            id.innerHTML = Date();
+            x = true;
+        }
+    </script>
+</html>
