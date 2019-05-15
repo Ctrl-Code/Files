@@ -1,0 +1,16 @@
+<script type="module">
+    let x = 5;
+    console.log("script 1 - x globally is ",window.x);
+    console.log("script 1 - x locally is ",x);
+</script>
+<script type="module">
+    window.y = 10;
+    console.log("script 2 - y globally is ",window.y);
+    console.log("script 2 - y locally is ",y);
+</script>
+<script type="module">
+    console.log("script 3 - y globally is ",window.y);
+    console.log("script 3 - y locally is ",y);
+    console.log("script 3 - x globally is ",window.x);
+    console.log("script 3 - x locally is ",x);
+</script>
