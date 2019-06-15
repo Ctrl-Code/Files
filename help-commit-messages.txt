@@ -1,0 +1,14 @@
+The syntax for commit messages is as follows
+    ------------------------------------------------------------------------
+    <action> "|" <number> "file(s)" | <path-to-the-folder>
+    ------------------------------------------------------------------------
+        |
+    possible values are
+    1. created
+    2. deleted
+    3. renamed
+
+
+examples of commit messages are as follows:
+    created | 01 files | help-commit-messages.txt
+    created | 02 files | c-cpp/algorithms/dynamic-programming/
